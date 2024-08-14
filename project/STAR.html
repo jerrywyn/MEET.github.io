@@ -18,9 +18,9 @@
 </head>
 
 <body marginheight="0">
-<div align="center"><h1>STAR: A First-Ever Dnd A Large-Scale Benchmark for Scene Graph Generation in Large-Size Satellite Imagery<br></h1></div>
+<div align="center"><h1>Fine-Grained Geospatial Scene Classification: A Million-Scale Dataset and A Context-Aware Transformer<br></h1></div>
 
-<p style="text-align: center;">Yansheng Li, Linlin Wang, Tingzhu Wang, Xue Yang, Junwei Luo, Qi Wang, Youming Deng, Wenbin Wang, Xian Sun, Haifeng Li, Bo Dang, Yongjun Zhang, Yi Yu, and Junchi Yan</p>
+<p style="text-align: center;">Yansheng Li, Yuning Wu</p>
 
 <!-- <p style="text-align: center">Yansheng Li, Linlin Wang, Tingzhu Wang, Qi Wang, Xian Sun, Xue Yang, Wenbin Wang, Junwei Luo, Youming Deng, Haifeng Li, Bo Dang, Yongjun Zhang, Junchi Yan</p> -->
 
@@ -31,45 +31,23 @@
 
 <p style="text-align: center;">
 	<a href="https://arxiv.org/abs/2406.09410"><b>[Paper]</b></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-	
+
 	<a href="https://github.com/Zhuzi24/SGG-ToolKit"><b>[Github]</b></a>
 </p>
 
-<div style="border: 9px solid #FFFFFF"></div>
-<div id="tab6" class="tabMenu">
-    <div id="firstPage-tab6" class="show">
-        <video width="800" controls autoplay loop>
-            <source src="/figure/demo2.mp4" type="video/mp4" label="4k">
-        </video>
-		<p>Illustration of Scene graph generation(SGG) in large-size VHR SAI. Black arrows denote semantic relationships whose prediction only depends on isolated pairs, but red arrows denote semantic relationships that should be inferred with the aid of contexts.</p>
-    </div>
-</div>
-<div style="border: 9px solid #FFFFFF"></div>
+<img src="/figure/0807_intro.jpg" width="800px">
 
 
-<h3>⭐️ Highlights </h3> 
-<p> STAR, the first large-scale dataset  for OBD and SGG in <b> large-size </b> VHR SAI. <p>
+<h3>⭐️ Highlights </h3>
+<!--<p> STAR, the first large-scale dataset  for OBD and SGG in <b> large-size </b> VHR SAI. <p>-->
 
-<!-- <h2>Introduction</h2>
-<p>Scene graph generation (SGG) in remote sensing imagery (RSI) is crucial for cognitive understanding of geospatial scenes, but it faces unique challenges compared to perceptual recognition tasks such as object detection. In RSI, objects exhibit great variations in scales and aspect ratios, and there exist rich semantic relationships between objects (even between spatially disjoint objects). To ensure that high-value relationships between multi-scale objects can be fully mined, it is necessary to holistically conduct SGG in large-size very-high-resolution (VHR) RSI. However, the lack of SGG datasets with large-size VHR RSI has constrained the advancement of SGG. Due to the complexity of large-size VHR RSI, many triplets
-	 &lt;subject, relationship, object&gt; in large-size VHR RSI heavily rely on long-range contextual reasoning, making it inevitably impossible to directly apply SGG models from small-size natural imagery to large-size VHR RSI. To address the scarcity of datasets, this paper constructs a large-scale SGG dataset, named STAR, containing more than 210,000 objects and over 400,000 triplets in large-size VHR RSI. The dataset covers 1,273 sampling locations globally, with image sizes ranging from 512 × 768 to 27,860 × 31,096 pixels. Furthermore, we propose a context-aware cascade cognition (CAC) framework to understand RSI from different levels. In the CAC framework, a holistic multi-class object detection network (HOD-Net) is firstly employed to detect multi-scale objects in large-size VHR RSI, and then a proposal pair generation (PPG) network via adversarial reconstruction and a relationship prediction network with context-aware messaging (RPCM) are designed to acquire semantic interaction pairs containing rich knowledge as well as to predict high-value semantic relationships implicit in these pairs. To promote the development of SGG in large-size VHR RSI, this paper releases an SGG toolkit with five SGG methods and develops a benchmark where our RPCM outperforms the SOTA method with a large margin of 3.52%, 5.17%, and 3.80% on HM@1500 for PredCls, SGCls, and SGDet tasks.</p> -->
-
-<h3>STAR Dataset</h3>
-<p> To address the dataset scarcity problem, we introduce a large-scale dataset for <b>S</b>cene graph genera<b>T</b>ion in l<b>A</b>rge-size satellite image<b>R</b>y <b>(STAR)</b>,
-	which contains more than <b>210,000</b> objects and over <b>400,000</b> triplets for SGG in large-size VHR SAI. In this dataset, SAI with a spatial resolution of 0.15m to 1m is collected, 
-	 covering 11 categories of complex geospatial scenarios associated closely with human activities worldwide (e.g., airports, ports,
-	  nuclear power stations and dams). Under the guidance of experts in SAI, all objects are classified 
-	  into <b>48</b> fine-grained categories and precisely annotated with oriented bounding boxes (OBB), 
-	  and all relationships are annotated in accordance with 8 major categories including <b>58</b> fine-grained categories.
-	  All object pairs and their contained relationships are one-to-many annotated, and all relationship annotations 
-	  are absolute (unaffected by imagery rotation). In conclusion, 
-	  STAR has significant advantages over existing OBD datasets and SGG datasets in SAI. 
-	  To the best of our knowledge, STAR is the first large-scale dataset for SGG in large-size VHR SAI.	<br>
+<h3>MEET Dataset</h3>
+<p> MEET dataset is comprised of over 1.03 million sample annotation pairs, encompassing 80 fine-grained scene categories. Samples are collected globally and include multi-level spatial context information. The large sample size, the granularity of categories, and the inclusion of spatial context imagery make MEET a valuable dataset.	<br>
 
 
-	<img src="/figure/distr.jpg" width="800px">    
+	<img src="/figure/0720_distribute.png" width="800px">
 
-	
+
 
 <style>
 	.tabMenu ul {
@@ -85,68 +63,40 @@
 		white-space: nowrap;
 	}
 </style>
-	
+
 
 
 <div style="border: 9px solid #FFFFFF"></div>
 <div id = "tab1" class = "tabMenu">
 	<ul>
-	<li class="on"><h4>Obj-Rel Interaction</h4></li>
-        <li class="off"><h4>Objects</h4></li>
-		<li class="off"><h4>Relationships</h4></li>
-        <li class="off"><h4>Download Links</h4></li>
+	<li class="on"><h4>Dataset Overview</h4></li>
+        <li class="off"><h4>Statistics</h4></li>
+		<li class="off"><h4>Hierarchical scene category</h4></li>
         </ul>
 	<div id="firstPage-tab1" class="show">
-	<img src="/figure/rel_ratio.jpg" width="800px">
+	<img src="/figure/0720_allcase.png" width="800px">
         </div>
 
         <div id="secondPage-tab1" class= "hide">
-	    <img src="/figure/0531.jpg" width="800px">
+	    <img src="/figure/0720_longtail.jpg" width="800px">
       	</div>
 
 		<div id="thirdPage-tab1" class="hide">
-		<img src="/figure/rel.jpg" width="800px">
+		<img src="/figure/0720_sun_class.png" width="800px">
 
 		</div>
-		<div id="fourthPage-tab1" class="hide">
-		
-<!-- 		
-        </div>
-        <div id="thirdPage" class = "hide"> -->
-
-	<li style="margin-top: 5px" class = "dot"><span class = "lin">Baidu Drive: <a href="https://pan.baidu.com/s/1fQYOWIrcrlAcz1HJyaV9Rg" style="color: orange;"><b>Link, key: STAR</b></a> </span></li>
-	<li style="margin-top: 5px" class = "dot"><span class = "lin">Google Drive: <a href=""><b>Coming soon</b></a> </span></li>
-	<li style="margin-top: 5px" class = "dot"><span class = "lin">Huggingface: <a href=""><b>Coming soon</b></a> </span></li>
-    <li style="margin-top: 5px" class = "dot"><span class = "lin">Evaluation: <a href="https://www.codabench.org/competitions/3475/?secret_key=f1aff9f3-696d-4e10-9a63-f113153ed686" style="color: orange;"><b>Object Detection in STAR Dataset</b></a> </span></li>
-	The training set consists of 771 large-size SAI images, the validation set contains 238 images, and the test set includes 264 images. We have released both the images and ground truths for the training and validation sets. For the test set, only the images have been released, with the ground truths being made available during the challenge phase. If you make use of the STAR dataset, please cite our papers in Citation.
-		
-
-	<!-- <li style="margin-top: 5px" class = "dot"><span class = "lin">Baidu Drive: <a href="https://pan.baidu.com/s/1TVh9nLjjrLPaJp4yR5qHow?pwd=urxy"><b>Link (extraction code: urxy)</b></a> </span></li>
-	<li style="margin-top: 5px" class = "dot"><span class = "lin">Google Drive: <a href="https://drive.google.com/drive/folders/1VACDh3aGx72hDdz7Taf7FyUrpZS31Ksx?usp=share_link"><b>Link</b></a> </span></li>
-		 -->
-	</div>
 </div>
 <div style="border: 9px solid #FFFFFF"></div>
 
-<h3>SGG ToolBox</h3>
-<p> We releases a SAI-oriented SGG toolkit (<b><a href="https://github.com/Zhuzi24/SGG-ToolKit" target="_blank" rel="noopener noreferrer" style="color: orange;">https://github.com/Zhuzi24/SGG-ToolKit</a></b>) with about 30 OBD methods and 10 SGG methods for large-size VHR SAI. <p>
-<img src="/figure/toolbox.jpg" width="800px">   
+<h3>CAT</h3>
+<p>  We introduce CAT, a specialized framework to optimize the utilization of both the primary image sample and its corresponding contextual information. <p>
+<img src="/figure/0720_method.png" width="800px">
 
 
 <h3>Acknowledge</h3>
-<p>This work was supported by the National Natural Science Foundation of China.</p>
-<!-- <p>This web page is highly based on <a href="https://github.com/x-ytong/x-ytong.github.io">x-ytong.github.io</a>. We thank their web projects!</p> -->
+<!-- <p>This work was supported by the National Natural Science Foundation of China.</p>-->
 
-<!-- <h2 id="citation">Citation</h2>
-If you find this work helpful for your research, please consider citing our paper:
-<pre>
-	@article{li2024scene,
-		title={Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach},
-		author={Li, Yansheng and Wang, Linlin and Wang, Tingzhu and Yang, Xue and Wang, Qi and Sun, Xian and Wang, Wenbin and Luo, Junwei and Deng, Youming and Li, Haifeng and Dang, Bo and Zhang, Yongjun and Yan Junchi},
-		journal={arXiv preprint arXiv:},
-		year={2024}
-	  }
-</pre> -->
+
 <h2 id="citation">Citation</h2>
 <p>If you find this work helpful for your research, please consider citing our papers and staring ⭐<b><a href="https://github.com/Zhuzi24/SGG-ToolKit" target="_blank" rel="noopener noreferrer" style="color: orange;">SAI-oriented SGG toolkit</a></b>:</p>
 <pre>
@@ -155,14 +105,14 @@ If you find this work helpful for your research, please consider citing our pape
     author={Li, Yansheng and Wang, Linlin and Wang, Tingzhu and Yang, Xue and Luo, Junwei and Wang, Qi and Deng, Youming and Wang, Wenbin and Sun, Xian and Li, Haifeng and Dang, Bo and Zhang, Yongjun and Yu, Yi and Yan Junchi},
     journal={arXiv preprint arXiv:2406.09410},
     year={2024}}
-	
+
 @article{li2024fine,
   title={Fine-Grained Scene Graph Generation via Sample-Level Bias Prediction},
   author={Li, Yansheng and Wang, Tingzhu and Wu, Kang and Wang, Linlin and Guo, Xin and Wang, Wenbin},
   journal={arXiv preprint arXiv:2407.19259},
   year={2024}
 }
-	
+
 @article{luo2024sky,
     title={SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding},
     author={Luo, Junwei and Pang, Zhen and Zhang, Yongjun and Wang, Tingzhu and Wang, Linlin and Dang, Bo and Lao, Jiangwei and Wang, Jian and Chen, Jingdong and Tan, Yihua and Li, Yansheng},
@@ -192,9 +142,9 @@ If you find this work helpful for your research, please consider citing our pape
 
 
 <h3>Contact</h3>
-<p>E-mail: yansheng.li@whu.edu.cn; wangll@whu.edu.cn; tingzhu.wang@whu.edu.cn; luojunwei@whu.edu.cn</p>
-	
-<span style="vertical-align: middle;">🔍 <b>Real-time views of the web page STAR are</b> </span>
+<p>E-mail: yansheng.li@whu.edu.cn; yuning.wu@whu.edu.cn</p>
+
+<span style="vertical-align: middle;">🔍 <b>Real-time views of the web page MEET are</b> </span>
 <a href="https://info.flagcounter.com/LqCH">
     <img src="https://s01.flagcounter.com/mini/LqCH/bg_F2F2F2/txt_FF8C00/border_CCCCCC/flags_0/" alt="Free counters!" style="vertical-align: middle;" border="0">
 </a>
