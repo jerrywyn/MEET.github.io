@@ -70,7 +70,10 @@
 
 <h3>Introduction</h3>
 <p class="justified-text">
-Accurate fine-grained geospatial scene classification with remote sensing imagery is critical in various applications. Existing research manually zooms remote sensing images with different rates to form typical scene samples, which cannot well support the fixed-resolution image interpretation requirement in actual applications. To address this issue, we introduce a Million-scale finE-grained geospatial scEne classification dataseT (MEET), which consists of over 1.03 million zoom-free remote sensing image scene samples, which are manually annotated into 80 fine-grained categories. In MEET, each scene sample adopts a scene-in-scene layout where the center scene is the reference scene and the auxiliary scenes provide essential spatial contexts for fine-grained classification of the center scene. To tackle with the emerging scene-in-scene classification challenge, this paper presents a novel Context-Aware Transformer (CAT) that can leverage adaptive fusion of spatial contexts to elaborately classify the scene sample by learning the attentional feature between the center scene and the auxiliary scenes. Based on MEET, we establish a fine-grained geospatial scene classification benchmark with 12 fine-grained geospatial scene classification methods and extensive experiments validate the effectiveness of CAT in terms of the comparison with competitive baselines and the ablation study.
+Accurate fine-grained geospatial scene classification using remote sensing imagery is essential for a wide range of applications. However, existing approaches often rely on manually zooming remote sensing images at different scales to create typical scene samples. This approach fails to adequately support the fixed-resolution image interpretation requirements in real-world scenarios.
+To address this limitation, we introduce the Million-scale finE-grained geospatial scEne classification dataseT (MEET), which contains over 1.03 million zoom-free remote sensing scene samples, manually annotated into 80 fine-grained categories. In MEET, each scene sample follows a scene-in-scene layout, where the central scene serves as the reference, and auxiliary scenes provide crucial spatial context for fine-grained classification.
+Moreover, to tackle the emerging challenge of scene-in-scene classification, we present the Context-Aware Transformer (CAT), a model specifically designed for this task, which adaptively fuses spatial context to accurately classify the scene samples. CAT adaptively fuses spatial context to accurately classify the scene samples by learning attentional features that capture the relationships between the center and auxiliary scenes.
+Based on MEET, we establish a comprehensive benchmark for fine-grained geospatial scene classification, evaluating CAT against 11 competitive baselines. The results demonstrate that CAT significantly outperforms these baselines, achieving a 1.88% higher balanced accuracy (BA) with the Swin-Large backbone, and a notable 7.87% improvement with the Swin-Huge backbone. Further experiments validate the effectiveness of each module in CAT and show the practical applicability of CAT in the urban functional zone mapping.
 </p>
 <br>
 <br>
@@ -150,7 +153,7 @@ For the samples from first row and second row, models fail to predict the fine-g
 	    <!--<img src="/figure/0720_longtail.jpg" width="800px">-->
 		<p>
 			<ol>
-				<li>Baidu Drive: <a href="">Link</a> <br>   <!-- Link (extraction code: urxy) --></li>
+				<li>Baidu Drive: <a href="https://pan.baidu.com/s/1qFgzhypLUAA7G0sGR6eDwA?pwd=9pny">Link</a> <br>   <!-- Link (extraction code: urxy) --></li>
 				<li>Google Drive: <a href="">Link</a>	</li>
 			</ol>
 		   
@@ -193,7 +196,7 @@ For the samples from first row and second row, models fail to predict the fine-g
 				<img src="/figure/0918method.jpg" width="800px">
 			  </div>
 			  <div id="secondPage-tab1" class= "hide">
-				<img src="/figure/cat_result.png" width="800px">
+				<img src="/figure/com_res_0101.jpg" width="800px">
 				  </div>
 	
 	</div>
@@ -244,15 +247,15 @@ For the samples from first row and second row, models fail to predict the fine-g
         <li class="off"><h4>Wuhan</h4></li>
         </ul>
 		<div id="firstPage-tab111" class="show">
-			<img src="/figure/2ufz_result.png" width="800px">
+			<img src="/figure/ufz0_0101.jpg" width="800px">
 				</div>
 		
 				<div id="secondPage-tab111" class= "hide">
-					<img src="/figure/web_utf1.png" width="800px">
+					<img src="/figure/ufz1_0101.jpg" width="800px">
 				  </div>
 		
 				  <div id="thirdPage-tab111" class= "hide">
-					<img src="/figure/web_utf2.png" width="800px">
+					<img src="/figure/ufz2_0101.jpg" width="800px">
 					  </div>
 </div>
 <div style="border: 9px solid #FFFFFF"></div>
